@@ -18,22 +18,23 @@
 
             <nav>
 
-                <ul>
-                    <li> <a href="" class="nav-link">Consoles</a></li>
-                    <li> <a href="" class="nav-link">Acessórios</a></li>
-                    <li> <a href="" class="nav-link">Controles</a></li>
-                    <li> <a href="" class="nav-link">Outros</a></li>
+                <ul id="menu-list">
+                    <li class="nav-li"> <a href="" class="nav-link">Consoles</a></li>
+                    <li class="nav-li"> <a href="" class="nav-link">Acessórios</a></li>
+                    <li class="nav-li"> <a href="" class="nav-link">Controles</a></li>
+                    <li class="nav-li"> <a href="" class="nav-link">Outros</a></li>
                 </ul>
 
             </nav>
+            <img class="menu" onclick="showMenu()" src="./assets/menu.png" alt="menu.logo">
         </div>
 
         <div class="center">
             <div class="colunm-1">
-                <h1>PS5 DualSense</h1>
-                <h2>Wireless Controller for PlayStation</h2>
-                <p>Controle Original</p>
-                <h3>R$ 222,50</h3>
+                <h1 class="colunm1-text">PS5 DualSense</h1>
+                <h2 class="colunm1-text">Wireless Controller for PlayStation</h2>
+                <p class="colunm1-text">Controle Original</p>
+                <h3 class="colunm1-text">R$ 222,50</h3>
                 <button class="buy">Compre Agora</button>
             </div>
 
@@ -55,4 +56,16 @@
 
     </div>
 </body>
+<script>
+    const menuList = document.getElementById('menu-list')
+    menuList.style.maxHeight = '0px'
+
+    const showMenu = () => {
+        if (menuList.style.maxHeight == '0px') {
+            menuList.style.maxHeight = '120px'
+        } else {
+            menuList.style.maxHeight = '0px'
+        }
+    }
+</script>
 </html>
