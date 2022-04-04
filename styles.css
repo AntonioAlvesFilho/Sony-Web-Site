@@ -6,8 +6,7 @@
 }
 
 body {
-    background: rgb(42, 162, 171);
-    background: linear-gradient(90deg, rgba(42, 162, 171, 1) 18%, rgba(43, 64, 180, 1) 50%, rgba(17, 22, 87, 1) 87%);
+    background: linear-gradient(90deg, rgb(46, 56, 185) 18%, rgba(43, 64, 180, 1) 50%, rgba(17, 22, 87, 1) 87%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,7 +111,24 @@ h3 {
     border-radius: 6px;
     cursor: pointer;
     background: linear-gradient(90deg, rgb(71, 116, 199) 25%, rgb(54, 61, 168) 100%);
+    transition: all 0.65s ease-in-out;
+}
 
+.buy img {
+    width: 30px;
+    display: none;
+}
+
+.buy:hover {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 180px;
+}
+
+.buy:hover img {
+    display: block;
 }
 
 .colunm-2 {
@@ -124,6 +140,8 @@ h3 {
 .controller {
     width: 90%;
     z-index: 2;
+    animation: moveController 2s infinite alternate ease-in-out;
+
 }
 
 .color-box {
@@ -168,6 +186,7 @@ h3 {
     margin-right: 50px;
 }
 
+
 @media  (max-width: 800px) {
 
     .container {
@@ -189,9 +208,11 @@ h3 {
         position: relative;
         top: 60px;
         left: 60px;
-        overflow: hidden
+        overflow: hidden;
+        transition: all 0.7s ease;
+        cursor: pointer;
     }
-   
+
     .nav-link {
         display: block;
     }
@@ -213,5 +234,11 @@ h3 {
 @media (max-width: 300px) {
     .colunm1-text {
         font-size: 150%;
+    }
+}
+
+@keyframes moveController {
+    from {
+         transform: translate(-5%, -5%) rotate(-5deg);
     }
 }
