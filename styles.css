@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .container {
@@ -22,6 +23,7 @@ body {
     flex-direction: column;
     padding: 10px;
     overflow-x: hidden;
+    align-items: center;
 }
 
 .navbar {
@@ -63,6 +65,7 @@ li {
     justify-content: space-between;
     align-items: center;
     margin: 100px 0;
+    justify-content: center;
 }
 
 .colunm-1 {
@@ -140,6 +143,7 @@ h3 {
 
 .controller {
     width: 90%;
+    min-width: 300px;
     z-index: 2;
     animation: moveController 2s infinite alternate ease-in-out;
 
@@ -172,7 +176,7 @@ h3 {
 .social-links {
     display: flex;
     justify-content: center;
-    align-items: center;
+
     
 }
 
@@ -199,7 +203,7 @@ h3 {
 }
 
 
-@media  (max-width: 570px) {
+@media  (max-width: 640px) {
 
     .center {
         display: flex;
@@ -231,6 +235,30 @@ h3 {
 
     .colunm-2 {
         margin-bottom: 20px;
+        
+    }
+
+    .colunm-1 {
+        text-align: center;
+        padding-right: 50px;
+    }
+
+    .colunm-1::before {
+
+        height: 60%;
+        left: -10px;
+
+    }
+
+    .colunm-1::after {
+        content: "";
+        width: 10px;
+        height: 60%;
+        background: linear-gradient(90deg, rgb(71, 116, 199) 25%, rgb(54, 61, 168) 100%);
+        position: absolute;
+        right: -10px;
+        top: 8px;
+        margin-right: 48px;
     }
 
 }
