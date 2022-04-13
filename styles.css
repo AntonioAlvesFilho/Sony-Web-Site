@@ -239,7 +239,7 @@ h3 {
     }
 
     .colunm-1 {
-        text-align: center;
+        text-align: -webkit-center;
         padding-right: 50px;
     }
 
@@ -262,9 +262,12 @@ h3 {
     }
 
 }
-@media (max-width: 300px) {
+@media (max-width: 355px) {
     .colunm1-text {
         font-size: 150%;
+    }
+    .controller {
+        min-width: 200px;
     }
 }
 
